@@ -1,0 +1,69 @@
+.profileBox {
+  height: auto;
+  aspect-ratio: 1/1.2;
+  width: min(100%, 500px);
+  background-color: transparent;
+  position: relative;
+  margin-inline: auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background-color: #fff;
+    clip-path: url(#pathBox);
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #b9b9b9;
+    clip-path: url(#pathBox);
+  }
+
+  .boxImg {
+    width: 26%;
+    height: auto;
+    aspect-ratio: 1/1;
+    // transform: translateY(-5px);
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .profileNameBox {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 30%;
+    right: 0;
+    top: 0;
+    z-index: 10;
+
+    .profileName {
+      font-family: var(--ff-primary);
+      font-size: 1rem;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "Director";
+        top: 1.5rem;
+        font-size: 0.7rem;
+        color: var(--ion-color-primary);
+      }
+    }
+  }
+
+  .profileDescription {
+    position: absolute;
+    z-index: 20;
+    padding: 0.5rem;
+    top: 25%;
+  }
+}

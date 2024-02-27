@@ -1,0 +1,16 @@
+ion-item {
+  --inner-border-width: 0px;
+  --background: #d9d9d9;
+  margin-bottom: 0.5rem;
+
+  ion-label {
+    font-family: var(--ff-primary);
+    --color: var(--ion-color-primary);
+    font-size: 0.7rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+ion-icon {
+  color: #000;
+}

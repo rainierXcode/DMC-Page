@@ -1,0 +1,11 @@
+ion-item {
+  --inner-border-width: 0px;
+  --min-height: 35px;
+  --color: var(--ion-color-primary);
+  font-family: var(--ff-primary);
+  font-size: min(0.7rem, 5vw);
+}
+
+.underCourse {
+  --color: #000;
+}

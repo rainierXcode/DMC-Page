@@ -1,0 +1,203 @@
+<ion-app>
+  <ion-menu menu-id="main-menu" content-id="main" id="sideMenu">
+    <ion-header>
+      <ion-toolbar id="sideMenuToolbar" color="white">
+        <ion-grid>
+          <ion-row class="ion-justify-content-center">
+            <ion-col id="sideMenuLogo">
+              <ion-avatar
+                ><img src="../assets/images/MEXICO LOGO.svg" alt=""
+              /></ion-avatar>
+              <div id="sideDMC">DMC</div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content id="sideMenuContent">
+      <ion-list id="sideMenuList">
+        <ion-menu-toggle>
+          <ion-item routerLink="home" routerLinkActive="active">
+            <ion-icon src="../assets/icons/home.svg" slot="start"></ion-icon>
+            <ion-label class="sideMenuLabel">Home</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLinkActive="active" routerLink="/history">
+            <ion-icon src="../assets/icons/history.svg" slot="start"></ion-icon>
+            <ion-label class="sideMenuLabel">History</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLinkActive="active" routerLink="/vision-mission">
+            <ion-icon src="../assets/icons/goal.svg" slot="start"></ion-icon>
+            <ion-label class="sideMenuLabel">Vision & Mission</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLinkActive="active" routerLink="/course">
+            <ion-icon src="../assets/icons/course.svg" slot="start"></ion-icon>
+            <ion-label class="sideMenuLabel">Courses Offered</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLinkActive="active" routerLink="/organizations">
+            <ion-icon
+              src="../assets/icons/organization.svg"
+              slot="start"
+            ></ion-icon>
+            <ion-label class="sideMenuLabel">Organizations</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLinkActive="active" routerLink="/director">
+            <ion-icon
+              src="../assets/icons/director.svg"
+              slot="start"
+            ></ion-icon>
+            <ion-label class="sideMenuLabel">Director</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+
+    <ion-footer id="footer">
+      <ion-toolbar id="sideMenuFooter">
+        <ion-list>
+          <a href="https://www.facebook.com/" target="_blank">
+            <ion-item>
+              <ion-icon
+                src="../assets/socialMediaLogo/facebook.svg"
+                slot="start"
+              ></ion-icon>
+              <ion-label style="--color: #1976d2">Facebook</ion-label>
+            </ion-item>
+          </a>
+          <a href="https://dhvsu.edu.ph/" target="_blank">
+            <ion-item>
+              <ion-icon
+                src="../assets/socialMediaLogo/website.svg"
+                slot="start"
+              ></ion-icon>
+              <ion-label>dhvsu.edu.ph</ion-label>
+            </ion-item>
+          </a>
+          <a href="https://maps.app.goo.gl/rtedbSvAJ9mY5Gen9" target="_blank">
+            <ion-item>
+              <ion-icon
+                src="../assets/socialMediaLogo/location.svg"
+                slot="start"
+              ></ion-icon>
+              <ion-label>San Juan, Mexico Pampanga</ion-label>
+            </ion-item>
+          </a>
+        </ion-list>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+
+  #sideMenuToolbar {
+    --min-height: 100px;
+    --width: 150px;
+  }
+
+  #sideMenuFooter {
+    --min-height: 100px;
+
+    ion-label {
+      font-size: 0.8rem;
+      --color: var(--ion-color-primary);
+      font-family: var(--ff-secondary);
+      font-weight: 400;
+    }
+  }
+
+  #sideMenu {
+    --width: 234px;
+  }
+
+  .centerH {
+    display: flex;
+    justify-content: center;
+  }
+
+  .centerV {
+    display: flex;
+    align-items: center;
+  }
+
+  #sideMenuLogo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+
+    ion-avatar {
+      height: 60px;
+      aspect-ratio: 1/1;
+      width: auto;
+    }
+
+    #sideDMC {
+      font-family: var(--ff-secondary);
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: var(--ion-color-primary);
+    }
+  }
+
+  #sideMenuList {
+    padding-inline: 1rem;
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    box-shadow: none;
+    .currentNav {
+      --background: var(--ion-color-primary);
+      --border-radius: 10px;
+    }
+
+    .sideMenuLabel {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--ion-color-primary);
+    }
+
+    .active .sideMenuLabel {
+      color: #fff;
+    }
+  }
+
+  ion-icon {
+    color: var(--ion-color-primary);
+  }
+
+  .active {
+    --color: #fff;
+    --background: var(--ion-color-primary);
+    --border-radius: 10px;
+
+    ion-label {
+      color: #fff;
+    }
+
+    ion-icon {
+      color: #fff;
+    }
+  }
+</style>

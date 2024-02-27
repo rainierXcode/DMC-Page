@@ -1,0 +1,7 @@
+{
+  "name": "dmc",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
